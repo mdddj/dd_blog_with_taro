@@ -1,5 +1,5 @@
 import {Component} from 'react'
-import {View, Text} from '@tarojs/components'
+import {View} from '@tarojs/components'
 // @ts-ignore
 import ava from '../../../../../../hlx/github/dd_blog_with_taro/src/res/ava.jpg'
 

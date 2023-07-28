@@ -4,7 +4,7 @@
   "description": "典典的小程序博客",
   "appid": "wxe0752f049061e273",
   "setting": {
-    "urlCheck": true,
+    "urlCheck": false,
     "es6": false,
     "enhance": false,
     "compileHotReLoad": false,

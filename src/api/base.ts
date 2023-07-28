@@ -2,7 +2,7 @@ import Taro from "@tarojs/taro";
 
 
 
-let host = "http://192.168.100.55"
+let host = "http://192.168.199.75"
 
 export interface Result<T> {
   data: T | undefined,
@@ -47,7 +47,7 @@ export abstract class BaseApiImpl<T> implements BaseApi<T> {
     let res = await Taro.request<Result<T>>({
       url: host + this.apiUrl,
       method: method,
-      data: {...data, ...options.pageModel}
+      data: {...data, ...options.pageModel},
     });
     return res.data
   }

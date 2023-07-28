@@ -1,11 +1,9 @@
 import {useState} from "react";
-import { View } from "@tarojs/components";
+import {ScrollView} from "@tarojs/components";
 import {useReady} from "@tarojs/taro";
-import './index.less'
 import {ApiWithBlogList} from "../../api/server_api";
-import React from "react";
-import {Blog} from "../../types/blog";
-import {VirtualList} from "@nutui/nutui-react-taro";
+import {Blog} from "../../types/models";
+import BlogList from "../../components/BlogList";
 
 
 
@@ -24,20 +22,15 @@ export default function Index() {
     }
   }
 
-  useReady(async ()=>{
-    await fetchBlog(1)
-  })
+  useReady(async ()=>fetchBlog(1))
 
 
-  const ItemRender = ({ data }) => {
-      console.log(data)
-    return <View>{data.title}</View>
-  }
-  const ItemRenderMemo = React.memo(ItemRender)
 
   return (
-    <View>
-      <VirtualList sourceData={blogs} ItemRender={ItemRenderMemo} itemEqualSize={false} />
-    </View>
+    <ScrollView>
+        <BlogList request={ async page => {
+           return await new ApiWithBlogList().request({pageModel: {page: page, pageSize: 20}})
+        } } />
+    </ScrollView>
   )
 }
