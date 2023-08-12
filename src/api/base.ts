@@ -2,7 +2,7 @@ import Taro from "@tarojs/taro";
 
 
 
-let host = "http://192.168.199.75"
+let host = "http://192.168.199.79"
 
 export interface Result<T> {
   data: T | undefined,

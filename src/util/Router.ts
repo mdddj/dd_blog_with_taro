@@ -7,6 +7,7 @@ import Taro from "@tarojs/taro";
  */
 export async function goToBlogDetail(id: number): Promise<TaroGeneral.CallbackResult> {
     return await Taro.navigateTo({
-        url: 'pages/views/BlogDetailView?id=' + id
+        url: '/pages/views/BlogDetailView?id=' + id
     })
 }
+

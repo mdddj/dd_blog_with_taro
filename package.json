@@ -37,6 +37,10 @@
   "license": "MIT",
   "dependencies": {
     "@babel/runtime": "^7.22.6",
+    "@linaria/babel-preset": "^4.5.4",
+    "@linaria/core": "^4.5.4",
+    "@linaria/react": "^4.5.4",
+    "@linaria/webpack-loader": "^4.5.4",
     "@tarojs/components": "3.6.10",
     "@tarojs/helper": "3.6.10",
     "@tarojs/plugin-framework-react": "3.6.10",

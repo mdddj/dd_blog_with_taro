@@ -24,3 +24,9 @@ export class ApiWithBlogListByTag extends BaseApiImpl<PageListWrapper<Blog>>{
   apiUrl: string = "/api/blog/tag/blogs"
 }
 
+/**
+ * 获取博客详情
+ */
+export class ApiWithBlogDetail extends  BaseApiImpl<Blog>{
+  apiUrl : string = "/api/blog/get"
+}

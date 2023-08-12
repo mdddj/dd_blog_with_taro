@@ -1,4 +1,7 @@
 
+
+
+
 export interface Blog {
   aliasString: string;
   author:      string;
@@ -10,6 +13,7 @@ export interface Blog {
   tags:        Tag[];
   thumbnail:   string;
   title:       string;
+  html:        string;
 }
 
 export interface Category {
