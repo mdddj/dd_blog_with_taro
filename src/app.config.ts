@@ -5,7 +5,8 @@ export default defineAppConfig({
         'pages/image/image',
         'pages/category/category',
         'pages/views/TagBlogsView',
-        'pages/views/BlogDetailView'
+        'pages/views/BlogDetailView',
+        'pages/views/ResourceListView'
     ],
     tabBar: {
         list: [{

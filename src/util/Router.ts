@@ -11,3 +11,13 @@ export async function goToBlogDetail(id: number): Promise<TaroGeneral.CallbackRe
     })
 }
 
+/**
+ * 前往动态列表的页面
+ * @param name 群组名字
+ */
+export async function goToResourceListPage(name: string): Promise<TaroGeneral.CallbackResult> {
+    return await Taro.navigateTo({
+        url: '/pages/views/ResourceListView?name=' + name
+    })
+}
+

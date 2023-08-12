@@ -77,3 +77,109 @@ export interface Tag {
   id:   number;
   name: string;
 }
+
+/**
+ * 资源分类，分类
+ */
+export interface ResourceCategory {
+  description?: string;
+  id?: number;
+  level?: number;
+  logo?: string;
+  name?: string;
+  type?: string;
+}
+
+
+export interface Resource {
+  authority:      null;
+  browserUrl:     string;
+  category:       Category;
+  clickCount:     null;
+  content:        string;
+  createDate:     null;
+  description:    string;
+  fileInfo:       null;
+  id:             number;
+  images:         any[];
+  label:          string;
+  links:          string;
+  thumbnailImage: string;
+  title:          string;
+  type:           string;
+  updateDate:     null;
+  user:           User;
+}
+
+export interface Category {
+  description: string;
+  id:          number;
+  level:       number;
+  logo:        string;
+  name:        string;
+  type:        string;
+}
+
+export interface User {
+  accountNonExpired:     boolean;
+  accountNonLocked:      boolean;
+  authorities:           Authority[];
+  city:                  string;
+  credentialsNonExpired: boolean;
+  email:                 string;
+  enabled:               boolean;
+  enterprise:            Enterprise;
+  id:                    number;
+  intro:                 string;
+  job:                   string;
+  loginNumber:           string;
+  loginTime:             Date;
+  nickName:              string;
+  openAiFlag:            boolean;
+  openAiTokens:          number;
+  phone:                 string;
+  picture:               string;
+  relationId:            string;
+  roles:                 Authority[];
+  showName:              string;
+  status:                number;
+  type:                  number;
+  username:              string;
+  vip:                   number;
+  wallet:                number;
+}
+
+export interface Authority {
+  authority:   string;
+  createDate:  null;
+  icon:        string;
+  id:          number;
+  name:        string;
+  note:        string;
+  permissions: any[];
+  sort:        number;
+  status:      number;
+}
+
+export interface Enterprise {
+  enable:  boolean;
+  id:      number;
+  name:    string;
+  phone:   string;
+  profile: string;
+  qq:      string;
+  wechat:  string;
+}
+
+
+export interface JpaPage<T> {
+  content:          T[];
+  empty:            boolean;
+  first:            boolean;
+  last:             boolean;
+  number:           number;
+  numberOfElements: number;
+  size:             number;
+  totalElements:    number;
+  totalPages:       number;
+}
