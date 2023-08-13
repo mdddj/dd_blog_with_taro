@@ -21,6 +21,9 @@ const ResourceListView: React.FC = () => {
     useReady(()=>fetchData())
 
     const fetchData =async () => {
+        Taro.setNavigationBarTitle({
+            title: name
+        })
         let result =  await new ApiWithResourceList().request({
             data: {
                 "page":0,
@@ -51,7 +54,7 @@ const ResourceListView: React.FC = () => {
 //卡片布局
 const ResourceItemCard: React.FC<{item: Resource}> = ({item}) => {
 
-    return <View>
+    return <View className={'res-container'}>
         {
             item.content
         }

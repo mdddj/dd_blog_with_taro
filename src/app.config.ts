@@ -6,7 +6,7 @@ export default defineAppConfig({
         'pages/category/category',
         'pages/views/TagBlogsView',
         'pages/views/BlogDetailView',
-        'pages/views/ResourceListView'
+        'pages/views/ResourceListView',
     ],
     tabBar: {
         list: [{
@@ -42,7 +42,7 @@ export default defineAppConfig({
     window: {
         backgroundTextStyle: 'light',
         navigationBarBackgroundColor: '#fff',
-        navigationBarTitleText: 'WeChat',
+        navigationBarTitleText: '梁典典的博客',
         navigationBarTextStyle: 'black'
     }
 })
